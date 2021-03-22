@@ -98,7 +98,7 @@ AWS::RDS::DBInstance AllowMajorVersionUpgrade == true << Major version upgrades 
 AWS::RDS::DBInstance AutoMinorVersionUpgrade == true << Minor version upgrades should be enabled to receive security updates
 AWS::RDS::DBInstance BackupRetentionPeriod == %backup_retention << Backups should be retained for set retention period
 AWS::RDS::DBInstance EnableCloudwatchLogsExports == /.*/ << CloudWatch log exports should be enabled
-AWS::RDS::DBInstance PubliclyAccessible == false << Databasae should not be publicly accessible
+AWS::RDS::DBInstance PubliclyAccessible == false << Database should not be publicly accessible
 AWS::RDS::DBInstance StorageEncrypted == true << Storage encryption should be enabled
 
 AWS::RDS::DBProxy DebugLogging == false << Debug logging should not be enabled to avoid exposing SQL queries
@@ -107,7 +107,7 @@ AWS::RDS::DBProxy RequireTLS == true << TLS should be required for proxy connect
 AWS::Redshift::Cluster AllowVersionUpgrade == true << Minor version upgrades should be enabled to receive security updates
 AWS::Redshift::Cluster AutomatedSnapshotRetentionPeriod == %backup_retention << Backups should be retained for set retention period
 AWS::Redshift::Cluster Encrypted == true << Storage encryption should be enabled
-AWS::Redshift::Cluster PubliclyAccessible == false << Databasae should not be publicly accessible
+AWS::Redshift::Cluster PubliclyAccessible == false << Database should not be publicly accessible
 
 AWS::S3::AccessPoint PublicAccessBlockConfiguration.BlockPublicAcls == true << S3 should be set to block public ACLs
 AWS::S3::AccessPoint PublicAccessBlockConfiguration.BlockPublicPolicy == true << S3 should be set to block public policies
